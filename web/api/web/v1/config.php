@@ -14,6 +14,17 @@ $app['db.options'] = array(
     'password' => $mysql_pass
 );
 
+/**
+ * ElasticSearch Stuff
+ */
+$elasticsearch_host = 'localhost';
+$elasticsearch_port = 9200;
+
+$app['es.options'] = array(
+    'host' => $elasticsearch_host,
+    'port' => $elasticsearch_port
+);
+
 $ftp_inpi_server = '';
 $ftp_inpi_user_name = '';
 $ftp_inpi_user_pass = '';

@@ -20,6 +20,7 @@ chmod +x phpunit.phar
 sudo mv phpunit.phar /usr/local/bin/phpunit
 sudo chmod +x /usr/local/bin/phpunit
 # Elasticsearch Stuff
+## Elasticsearch core
 sudo apt-get -y update
 sudo apt-get -y install openjdk-7-jre-headless
 wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
@@ -27,6 +28,11 @@ echo "deb http://packages.elastic.co/elasticsearch/1.7/debian stable main" | sud
 sudo apt-get u-y pdate && sudo apt-get -y install elasticsearch
 sudo update-rc.d elasticsearch defaults 95 10
 sudo /etc/init.d/elasticsearch start
+## Elasticsearch client
+cd /var/www/web/api/web/v1/cron/
+sudo composer self-update
+sudo composer require ruflin/elastica
+sudo composer install
 # End Elasticsearch Stuff
 SCRIPT
 

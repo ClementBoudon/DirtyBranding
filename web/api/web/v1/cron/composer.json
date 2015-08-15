@@ -1,5 +1,6 @@
 {
     "require": {
-        "prewk/xml-string-streamer": "~0.7"
+        "prewk/xml-string-streamer": "~0.7",
+        "ruflin/elastica": "^2.2"
     }
 }
