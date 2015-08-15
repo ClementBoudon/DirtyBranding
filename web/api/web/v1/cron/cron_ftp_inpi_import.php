@@ -103,8 +103,7 @@
             $stmt_ins->bindValue(3, 1);
             $stmt_ins->execute();
 
-        echo ' [OK]
-';
+        echo ' [OK]'.PHP_EOL;
 
     }
 

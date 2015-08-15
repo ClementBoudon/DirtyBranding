@@ -84,8 +84,7 @@
             }
         }
 
-        echo ' [OK]
-';
+        echo ' [OK]'.PHP_EOL;
 
     }
 
