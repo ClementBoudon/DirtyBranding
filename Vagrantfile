@@ -19,6 +19,15 @@ wget https://phar.phpunit.de/phpunit.phar
 chmod +x phpunit.phar
 sudo mv phpunit.phar /usr/local/bin/phpunit
 sudo chmod +x /usr/local/bin/phpunit
+# Elasticsearch Stuff
+sudo apt-get -y update
+sudo apt-get -y install openjdk-7-jre-headless
+wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb http://packages.elastic.co/elasticsearch/1.7/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-1.7.list
+sudo apt-get u-y pdate && sudo apt-get -y install elasticsearch
+sudo update-rc.d elasticsearch defaults 95 10
+sudo /etc/init.d/elasticsearch start
+# End Elasticsearch Stuff
 SCRIPT
 
 Vagrant.configure("2") do |config|
