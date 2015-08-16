@@ -35,6 +35,7 @@ sudo composer require ruflin/elastica
 sudo composer install
 ## Elasticsearch Frontend
 sudo /usr/share/elasticsearch/bin/plugin -i elasticsearch/marvel/latest
+sudo /etc/init.d/elasticsearch restart
 # End Elasticsearch Stuff
 SCRIPT
 
