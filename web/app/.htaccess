@@ -1,5 +1,6 @@
 AuthName "This is the law"
-AuthUserFile /var/www/web/app/.htpasswd
+# AuthUserFile /var/www/web/app/.htpasswd
 # AuthUserFile /home/dirtybrasv/app/.htpasswd
+AuthUserFile /var/www/domains/dirtybranding.com/app/.htpasswd
 AuthType Basic
 Require valid-user
